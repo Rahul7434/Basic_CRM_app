@@ -1,0 +1,14 @@
+{% extends "crmapp/base.html" %}
+
+{% block main %}
+  <div class="col-md-6 offset-md-3">
+    <h1>Add Record</h1>
+    <br>
+    <form action="{% url 'home' %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <br>
+        <button type="submit" class="btn btn-secondary">Save</button>
+    </form>
+  </div>
+{% endblock main %}

@@ -1,0 +1,13 @@
+{% extends "crmapp/base.html" %}
+
+{% block main %}
+  <h2>Update Record</h2>
+  <br>
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <br>
+    <button type="submit" class="btn btn-success">Update</button>
+  </form>
+
+{% endblock main %}
